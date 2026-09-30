@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Horóscopo-Android</string>
+
+    <!-- Aries -->
+    <string name="aries">Aries</string>
+    <string name="aries_date_range">21 de marzo - 19 de abril</string>
+
+    <!-- Taurus -->
+    <string name="taurus">Tauro</string>
+    <string name="taurus_date_range">20 de abril - 20 de mayo</string>
+
+    <!-- Gemini -->
+    <string name="gemini">Géminis</string>
+    <string name="gemini_date_range">21 de mayo - 20 de junio</string>
+
+    <!-- Cancer -->
+    <string name="cancer">Cáncer</string>
+    <string name="cancer_date_range">21 de junio - 22 de julio</string>
+
+    <!-- Leo -->
+    <string name="leo">Leo</string>
+    <string name="leo_date_range">23 de julio - 22 de agosto</string>
+
+    <!-- Virgo -->
+    <string name="virgo">Virgo</string>
+    <string name="virgo_date_range">23 de agosto - 22 de septiembre</string>
+
+    <!-- Libra -->
+    <string name="libra">Libra</string>
+    <string name="libra_date_range">23 de septiembre - 22 de octubre</string>
+
+    <!-- Scorpio -->
+    <string name="scorpio">Escorpio</string>
+    <string name="scorpio_date_range">23 de octubre - 21 de noviembre</string>
+
+    <!-- Sagittarius -->
+    <string name="sagittarius">Sagitario</string>
+    <string name="sagittarius_date_range">22 de noviembre - 21 de diciembre</string>
+
+    <!-- Capricorn -->
+    <string name="capricorn">Capricornio</string>
+    <string name="capricorn_date_range">22 de diciembre - 19 de enero</string>
+
+    <!-- Aquarius -->
+    <string name="aquarius">Acuario</string>
+    <string name="aquarius_date_range">20 de enero - 18 de febrero</string>
+
+    <!-- Pisces -->
+    <string name="pisces">Piscis</string>
+    <string name="pisces_date_range">19 de febrero - 20 de marzo</string>
+</resources>
