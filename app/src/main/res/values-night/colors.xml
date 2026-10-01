@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors (Dark Mode) -->
+    <color name="primary">#D0BCFF</color>
+    <color name="on_primary">#381E72</color>
+    <color name="primary_container">#4F378B</color>
+
+    <!-- Secondary Colors (Dark Mode) -->
+    <color name="secondary">#CCC2DC</color>
+    <color name="on_secondary">#332D41</color>
+    <color name="secondary_container">#4A4458</color>
+
+    <!-- Card Background (Dark Mode) -->
+    <color name="card_background">#75699B</color>
+
+    <color name="horoscope_icon_color">#FFFFFFFF</color>
+    <color name="horoscope_dual_tone_color">#550B62</color>
+</resources>

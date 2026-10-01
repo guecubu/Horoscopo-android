@@ -2,4 +2,20 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Primary Colors (Light Mode) -->
+    <color name="primary">#6750A4</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="primary_container">#B08BFF</color>
+
+    <!-- Secondary Colors (Light Mode) -->
+    <color name="secondary">#625B71</color>
+    <color name="on_secondary">#FFFFFF</color>
+    <color name="secondary_container">#C8AAFF</color>
+
+    <!-- Card Background (Light Mode) -->
+    <color name="card_background">#DBE3FF</color>
+
+    <color name="horoscope_icon_color">#FF000000</color>
+    <color name="horoscope_dual_tone_color">#63FF0000</color>
 </resources>
