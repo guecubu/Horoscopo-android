@@ -3,49 +3,50 @@
 
     <!-- Aries -->
     <string name="aries">Aries</string>
-    <string name="aries_date_range">03/21 to 04/19</string>
+    <string name="aries_date_range">March 21 - April 19</string>
 
     <!-- Taurus -->
     <string name="taurus">Taurus</string>
-    <string name="taurus_date_range">04/20 to 05/20</string>
+    <string name="taurus_date_range">April 20 - May 20</string>
 
     <!-- Gemini -->
     <string name="gemini">Gemini</string>
-    <string name="gemini_date_range">05/21 to 06/20</string>
+    <string name="gemini_date_range">May 21 - June 20</string>
 
     <!-- Cancer -->
     <string name="cancer">Cancer</string>
-    <string name="cancer_date_range">06/21 to 07/22</string>
+    <string name="cancer_date_range">June 21 - July 22</string>
 
     <!-- Leo -->
     <string name="leo">Leo</string>
-    <string name="leo_date_range">07/23 to 08/22</string>
+    <string name="leo_date_range">July 23 - August 22</string>
 
     <!-- Virgo -->
     <string name="virgo">Virgo</string>
-    <string name="virgo_date_range">08/23 to 09/22</string>
+    <string name="virgo_date_range">August 23 - September 22</string>
 
     <!-- Libra -->
     <string name="libra">Libra</string>
-    <string name="libra_date_range">09/23 to 10/22</string>
+    <string name="libra_date_range">September 23 - October 22</string>
 
     <!-- Scorpio -->
     <string name="scorpio">Scorpio</string>
-    <string name="scorpio_date_range">10/23 to 11/21</string>
+    <string name="scorpio_date_range">October 23 - November 21</string>
 
     <!-- Sagittarius -->
     <string name="sagittarius">Sagittarius</string>
-    <string name="sagittarius_date_range">11/22 to 12/21</string>
+    <string name="sagittarius_date_range">November 22 - December 21</string>
 
     <!-- Capricorn -->
     <string name="capricorn">Capricorn</string>
-    <string name="capricorn_date_range">12/22 to 01/19</string>
+    <string name="capricorn_date_range">December 22 - January 19</string>
 
     <!-- Aquarius -->
     <string name="aquarius">Aquarius</string>
-    <string name="aquarius_date_range">01/20 to 02/18</string>
+    <string name="aquarius_date_range">January 20 - February 18</string>
 
     <!-- Pisces -->
     <string name="pisces">Pisces</string>
-    <string name="pisces_date_range">02/19 to 03/20</string>
+    <string name="pisces_date_range">February 19 - March 20</string>
+    <string name="iconDescription" translatable="false">description</string>
 </resources>
