@@ -5,6 +5,4 @@ data class Horoscope(
     val name: Int,
     val dateRange: Int,
     val icon: Int
-) {
-
-}
+)
