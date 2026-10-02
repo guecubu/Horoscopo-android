@@ -11,7 +11,7 @@
     <color name="secondary_container">#4A4458</color>
 
     <!-- Card Background (Dark Mode) -->
-    <color name="card_background">#75699B</color>
+    <color name="card_background">#E675699B</color>
 
     <color name="horoscope_icon_color">#FFFFFFFF</color>
     <color name="horoscope_dual_tone_color">#550B62</color>

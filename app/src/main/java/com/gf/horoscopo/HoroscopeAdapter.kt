@@ -7,7 +7,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class HoroscopeAdapter(val items: List<Horoscope>) : RecyclerView.Adapter<HoroscopeViewHolder>() {
+class HoroscopeAdapter(val items: List<Horoscope>, val onItemClick: (position: Int) -> Unit) :
+        RecyclerView.Adapter<HoroscopeViewHolder>() {
     override fun onCreateViewHolder(
             parent: ViewGroup,
             viewType: Int
@@ -23,6 +24,9 @@ class HoroscopeAdapter(val items: List<Horoscope>) : RecyclerView.Adapter<Horosc
     ) {
         val horoscope = items[position]
         holder.bind(horoscope)
+        holder.itemView.setOnClickListener {
+            onItemClick(position)
+        }
     }
 
     override fun getItemCount(): Int {
