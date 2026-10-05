@@ -58,4 +58,50 @@ class DetailActivity : AppCompatActivity() {
         horoscopeName.setText(horoscope.name)
         horoscopeDate.setText(horoscope.dateRange)
     }
+
+    private fun fetchHoroscope(sign: String) {
+        horoscopeProgressBar.visibility = View.VISIBLE
+        horoscopeDescription.text = ""
+
+        lifecycleScope.launch {
+            try {
+                val response = withContext(Dispatchers.IO) {
+                    HoroscopeApiService.create().getDailyHoroscope(sign)
+                }
+                horoscopeProgressBar.visibility = View.GONE
+                horoscopeDescription.text = response.data.horoscope
+            } catch (e: Exception) {
+                horoscopeProgressBar.visibility = View.GONE
+                horoscopeDescription.text = "Error loading horoscope: ${e.localizedMessage}"
+            }
+        }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.activity_detail_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                finish()
+                true
+            }
+
+            R.id.favorite_menu -> {
+//                shareHoroscope()
+                true
+            }
+
+            R.id.share_menu -> {
+//                shareHoroscope()
+                true
+            }
+
+            else -> super.onOptionsItemSelected(item)
+
+        }
+
+    }
 }
