@@ -5,55 +5,54 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".DetailActivity">
+    android:gravity="center_horizontal"
+    android:padding="24dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/detailIconImageView"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/iconDescription"
+        tools:src="@drawable/aries_icon" />
+
+    <TextView
+        android:id="@+id/detailNameTextView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:padding="10dp">
+        android:layout_marginTop="16dp"
+        android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+        android:textStyle="bold"
+        tools:text="Aries" />
 
-        <ImageView
-            android:id="@+id/iconDetailImageView"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:background="@color/card_background"
-            android:contentDescription="@string/iconDescription"
-            android:padding="8dp"
-            tools:src="@drawable/aries_icon" />
+    <TextView
+        android:id="@+id/detailDatesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+        tools:text="March 21 - April 19" />
+
+    <ProgressBar
+        android:id="@+id/detailProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:visibility="visible" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_weight="1">
 
         <TextView
-            android:id="@+id/horoscopeNameDetailTextView"
+            android:id="@+id/detailHoroscopeTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="casual"
-            android:gravity="center"
-            android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
-            android:textSize="48sp"
-            android:textStyle="normal"
-            tools:text="Aries" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="vertical"
-        android:padding="10dp"
-
-        >
-
-
-        <TextView
-            android:id="@+id/horoscopeDatesDetailTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
-            android:textSize="24sp"
-            android:textStyle="italic"
-            tools:text="March 21 - April 19" />
-
-    </LinearLayout>
+            android:lineSpacingExtra="4dp"
+            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+            tools:text="Horoscope description loading..." />
+    </ScrollView>
 
 </LinearLayout>

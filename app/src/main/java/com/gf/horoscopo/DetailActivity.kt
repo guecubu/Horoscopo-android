@@ -1,20 +1,28 @@
 package com.gf.horoscopo
 
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import android.view.View
 import android.widget.ImageView
+import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class DetailActivity : AppCompatActivity() {
 
-    lateinit var iconView: ImageView
-    lateinit var horoscopeName: TextView
-    lateinit var horoscopeDescription: TextView
-    lateinit var horoscopeDate: TextView
-
+    private lateinit var iconView: ImageView
+    private lateinit var horoscopeName: TextView
+    private lateinit var horoscopeDescription: TextView
+    private lateinit var horoscopeDate: TextView
+    private lateinit var horoscopeProgressBar: ProgressBar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,17 +37,23 @@ class DetailActivity : AppCompatActivity() {
         val id = intent.getStringExtra("HOROSCOPE_ID")!!
 
         val horoscope = Horoscope.getById(id)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setTitle(horoscope.name)
+
+
         setHoroscopeData(horoscope)
-
+        fetchHoroscope(id)
     }
 
-    fun initViews() {
-        iconView = findViewById(R.id.iconDetailImageView)
-        horoscopeName = findViewById(R.id.horoscopeNameDetailTextView)
-        horoscopeDate = findViewById(R.id.horoscopeDatesDetailTextView)
+    private fun initViews() {
+        iconView = findViewById(R.id.detailIconImageView)
+        horoscopeName = findViewById(R.id.detailNameTextView)
+        horoscopeDate = findViewById(R.id.detailDatesTextView)
+        horoscopeDescription = findViewById(R.id.detailHoroscopeTextView)
+        horoscopeProgressBar = findViewById(R.id.detailProgressBar)
     }
 
-    fun setHoroscopeData(horoscope: Horoscope) {
+    private fun setHoroscopeData(horoscope: Horoscope) {
         iconView.setImageResource(horoscope.icon)
         horoscopeName.setText(horoscope.name)
         horoscopeDate.setText(horoscope.dateRange)

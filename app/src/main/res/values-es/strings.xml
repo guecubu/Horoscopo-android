@@ -48,4 +48,5 @@
     <!-- Pisces -->
     <string name="pisces">Piscis</string>
     <string name="pisces_date_range">19 de febrero - 20 de marzo</string>
+    <string name="search">Búsqueda</string>
 </resources>
