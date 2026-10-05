@@ -2,6 +2,7 @@ package com.gf.horoscopo
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import androidx.activity.enableEdgeToEdge
@@ -53,10 +54,12 @@ class MainActivity : AppCompatActivity() {
 
             override fun onQueryTextChange(newText: String): Boolean {
 
-//                val filteredList = horoscopeList.filter { horoscope ->
-//                    horoscope.contains(newText, true)
-//                }
+                val filteredList = horoscopeList.filter { horoscope ->
+                    getString(horoscope.name).contains(newText, ignoreCase = true)
+                }
+                Log.i("filteredList", filteredList.toString())
 
+                horoscopeAdapter.updateData(filteredList)
 //                horoscopeAdapter.updateData(filteredList)
                 return true
             }

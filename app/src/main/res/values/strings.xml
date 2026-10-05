@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Horóscopo-Android</string>
+    <string name="app_name">Daily horoscope</string>
 
     <!-- Aries -->
     <string name="aries">Aries</string>
