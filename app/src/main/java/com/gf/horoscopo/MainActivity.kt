@@ -30,7 +30,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         horoscopeRecyclerView = findViewById(R.id.horoscopeRecyclerView)
-        horoscopeAdapter = HoroscopeAdapter(horoscopeList) { position ->
+//        horoscopeAdapter = HoroscopeAdapter(horoscopeList) { position ->
+        horoscopeAdapter = HoroscopeAdapter { position ->
             val horoscope = horoscopeList[position]
             val intent = Intent(this, DetailActivity::class.java).apply {
                 putExtra("HOROSCOPE_ID", horoscope.id)
@@ -39,6 +40,7 @@ class MainActivity : AppCompatActivity() {
         }
         horoscopeRecyclerView.adapter = horoscopeAdapter
         horoscopeRecyclerView.layoutManager = LinearLayoutManager(this)
+        horoscopeAdapter.submitList(horoscopeList)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -59,7 +61,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 Log.i("filteredList", filteredList.toString())
 
-                horoscopeAdapter.updateData(filteredList)
+                horoscopeAdapter.submitList(filteredList)
 //                horoscopeAdapter.updateData(filteredList)
                 return true
             }
