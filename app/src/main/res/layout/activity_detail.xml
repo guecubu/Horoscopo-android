@@ -53,7 +53,6 @@
             app:cardElevation="10dp"
             app:cardCornerRadius="12dp"
             android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="28dp"
             >
             <ProgressBar
                 android:id="@+id/detailProgressBar"
@@ -69,7 +68,8 @@
                 android:lineSpacingExtra="4dp"
                 android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
                 tools:text="Horoscope description loading..."
-                android:padding="16dp"/>
+                android:justificationMode="inter_word"
+                android:padding="16dp" />
         </com.google.android.material.card.MaterialCardView>
 
     </ScrollView>

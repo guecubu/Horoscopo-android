@@ -31,8 +31,8 @@ class MainActivity : AppCompatActivity() {
 
         horoscopeRecyclerView = findViewById(R.id.horoscopeRecyclerView)
 //        horoscopeAdapter = HoroscopeAdapter(horoscopeList) { position ->
-        horoscopeAdapter = HoroscopeAdapter { position ->
-            val horoscope = horoscopeList[position]
+        horoscopeAdapter = HoroscopeAdapter { horoscope ->
+            Log.d("MainActivity", "Horoscope clicked: $horoscope")
             val intent = Intent(this, DetailActivity::class.java).apply {
                 putExtra("HOROSCOPE_ID", horoscope.id)
             }
@@ -56,10 +56,10 @@ class MainActivity : AppCompatActivity() {
 
             override fun onQueryTextChange(newText: String): Boolean {
 
-                val filteredList = horoscopeList.filter { horoscope ->
-                    getString(horoscope.name).contains(newText, ignoreCase = true)
+                val filteredList = horoscopeList.filter {
+                    getString(it.name).search(newText) ||
+                            getString(it.dateRange).search(newText)
                 }
-                Log.i("filteredList", filteredList.toString())
 
                 horoscopeAdapter.submitList(filteredList)
 //                horoscopeAdapter.updateData(filteredList)

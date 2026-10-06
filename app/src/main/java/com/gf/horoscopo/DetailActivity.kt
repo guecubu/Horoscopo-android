@@ -40,7 +40,6 @@ class DetailActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setTitle(horoscope.name)
 
-
         setHoroscopeData(horoscope)
         fetchHoroscope(id)
     }
@@ -68,8 +67,11 @@ class DetailActivity : AppCompatActivity() {
                 val response = withContext(Dispatchers.IO) {
                     HoroscopeApiService.create().getDailyHoroscope(sign)
                 }
+
+
+                horoscopeDescription.setTranslatedText(response.data.horoscope, "en")
+//                horoscopeDescription.text = response.data.horoscope
                 horoscopeProgressBar.visibility = View.GONE
-                horoscopeDescription.text = response.data.horoscope
             } catch (e: Exception) {
                 horoscopeProgressBar.visibility = View.GONE
                 horoscopeDescription.text = "Error loading horoscope: ${e.localizedMessage}"

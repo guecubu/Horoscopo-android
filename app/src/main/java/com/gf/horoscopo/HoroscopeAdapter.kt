@@ -9,10 +9,10 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 
-class HoroscopeAdapter(val onItemClick: (position: Int) -> Unit) :
+class HoroscopeAdapter(val onItemClick: (Horoscope) -> Unit) :
         ListAdapter<Horoscope, HoroscopeViewHolder>(HoroscopeDiffCallback) {
-    //            class HoroscopeAdapter(var items: List<Horoscope>, val onItemClick: (position: Int) -> Unit) :
-//            RecyclerView.Adapter<HoroscopeViewHolder>() {
+    //  class HoroscopeAdapter(var items: List<Horoscope>, val onItemClick: (position: Int) -> Unit) :
+    //            RecyclerView.Adapter<HoroscopeViewHolder>() {
     override fun onCreateViewHolder(
             parent: ViewGroup,
             viewType: Int
@@ -30,19 +30,16 @@ class HoroscopeAdapter(val onItemClick: (position: Int) -> Unit) :
         val horoscope = getItem(position)
         holder.bind(horoscope)
         holder.itemView.setOnClickListener {
-            onItemClick(position)
+            onItemClick(horoscope)
         }
     }
 
     object HoroscopeDiffCallback : DiffUtil.ItemCallback<Horoscope>() {
         override fun areItemsTheSame(oldItem: Horoscope, newItem: Horoscope): Boolean {
-            // Compara si representan el mismo elemento (idealmente usando un ID único o el nombre del signo)
-            return oldItem.name == newItem.name
+            return oldItem.id == newItem.id
         }
 
         override fun areContentsTheSame(oldItem: Horoscope, newItem: Horoscope): Boolean {
-            // Compara si sus datos internos cambiaron.
-            // Si 'Horoscope' es una data class, el operador '==' compara todas las propiedades automáticamente.
             return oldItem == newItem
         }
     }
