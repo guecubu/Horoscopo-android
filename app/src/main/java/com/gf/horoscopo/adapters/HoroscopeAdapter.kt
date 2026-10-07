@@ -1,32 +1,29 @@
-package com.gf.horoscopo
+package com.gf.horoscopo.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.gf.horoscopo.R
+import com.gf.horoscopo.data.Horoscope
+import com.gf.horoscopo.utils.SessionManager
 
 class HoroscopeAdapter(val onItemClick: (Horoscope) -> Unit) :
-        ListAdapter<Horoscope, HoroscopeViewHolder>(HoroscopeDiffCallback) {
+        androidx.recyclerview.widget.ListAdapter<Horoscope, HoroscopeViewHolder>(
+                HoroscopeDiffCallback) {
     //  class HoroscopeAdapter(var items: List<Horoscope>, val onItemClick: (position: Int) -> Unit) :
     //            RecyclerView.Adapter<HoroscopeViewHolder>() {
-    override fun onCreateViewHolder(
-            parent: ViewGroup,
-            viewType: Int
-    ): HoroscopeViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HoroscopeViewHolder {
         val view =
             LayoutInflater.from(parent.context).inflate(R.layout.item_horoscope, parent, false)
         return HoroscopeViewHolder(view)
     }
 
-    override fun onBindViewHolder(
-            holder: HoroscopeViewHolder,
-            position: Int
-    ) {
-//        val horoscope = items[position]
+    override fun onBindViewHolder(holder: HoroscopeViewHolder, position: Int) {
         val horoscope = getItem(position)
         holder.bind(horoscope)
         holder.itemView.setOnClickListener {
@@ -44,15 +41,14 @@ class HoroscopeAdapter(val onItemClick: (Horoscope) -> Unit) :
         }
     }
 
-//    override fun getItemCount(): Int {
-//        return items.size
-//    }
+    //    override fun getItemCount(): Int {
+    //        return items.size
+    //    }
 
-//    fun updateData(filteredList: List<Horoscope>) {
-//        this.items = filteredList
-//        notifyDataSetChanged()
-//    }
-
+    //    fun updateData(filteredList: List<Horoscope>) {
+    //        this.items = filteredList
+    //        notifyDataSetChanged()
+    //    }
 
 }
 
@@ -61,10 +57,21 @@ class HoroscopeViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     val nameTextView: TextView = view.findViewById(R.id.horoscopeNameTextView)
     val dateRangeTextView: TextView = view.findViewById(R.id.horoscopeDatesTextView)
 
+    val favoriteImageView: ImageView = view.findViewById(R.id.favoriteImageView)
+
     fun bind(horoscope: Horoscope) {
+
         iconImageView.setImageResource(horoscope.icon)
         nameTextView.setText(horoscope.name)
         dateRangeTextView.setText(horoscope.dateRange)
+        favoriteImageView.isVisible = SessionManager(itemView.context).isFavorite(horoscope.id)
+
+        //        if (SessionManager(itemView.context).isFavorite(horoscope.id)) {
+        //            favoriteImageView.visibility = View.VISIBLE
+        //        }
+        //        else {
+        //            favoriteImageView.visibility = View.GONE
+        //        }
 
     }
 

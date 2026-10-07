@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">每日星座运势</string>
+    <string name="app_title">星座</string>
+    <string name="app_subtitle">查看您的每日星座运势</string>
+
+    <!-- Aries -->
+    <string name="aries">白羊座</string>
+    <string name="aries_date_range">3月21日 - 4月19日</string>
+
+    <!-- Taurus -->
+    <string name="taurus">金牛座</string>
+    <string name="taurus_date_range">4月20日 - 5月20日</string>
+
+    <!-- Gemini -->
+    <string name="gemini">双子座</string>
+    <string name="gemini_date_range">5月21日 - 6月20日</string>
+
+    <!-- Cancer -->
+    <string name="cancer">巨蟹座</string>
+    <string name="cancer_date_range">6月21日 - 7月22日</string>
+
+    <!-- Leo -->
+    <string name="leo">狮子座</string>
+    <string name="leo_date_range">7月23日 - 8月22日</string>
+
+    <!-- Virgo -->
+    <string name="virgo">处女座</string>
+    <string name="virgo_date_range">8月23日 - 9月22日</string>
+
+    <!-- Libra -->
+    <string name="libra">天秤座</string>
+    <string name="libra_date_range">9月23日 - 10月22日</string>
+
+    <!-- Scorpio -->
+    <string name="scorpio">天蝎座</string>
+    <string name="scorpio_date_range">10月23日 - 11月21日</string>
+
+    <!-- Sagittarius -->
+    <string name="sagittarius">射手座</string>
+    <string name="sagittarius_date_range">11月22日 - 12月21日</string>
+
+    <!-- Capricorn -->
+    <string name="capricorn">摩羯座</string>
+    <string name="capricorn_date_range">12月22日 - 1月19日</string>
+
+    <!-- Aquarius -->
+    <string name="aquarius">水瓶座</string>
+    <string name="aquarius_date_range">1月20日 - 2月18日</string>
+
+    <!-- Pisces -->
+    <string name="pisces">双鱼座</string>
+    <string name="pisces_date_range">2月19日 - 3月20日</string>
+
+    <string name="search">搜索</string>
+    <string name="menu_favorite">收藏</string>
+    <string name="translating">正在翻译…</string>
+</resources>

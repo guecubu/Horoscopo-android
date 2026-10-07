@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Horoscope quotidien</string>
+    <string name="app_title">Zodiaque</string>
+    <string name="app_subtitle">Consultez votre horoscope quotidien</string>
+
+    <!-- Aries -->
+    <string name="aries">Bélier</string>
+    <string name="aries_date_range">21 mars - 19 avril</string>
+
+    <!-- Taurus -->
+    <string name="taurus">Taureau</string>
+    <string name="taurus_date_range">20 avril - 20 mai</string>
+
+    <!-- Gemini -->
+    <string name="gemini">Gémeaux</string>
+    <string name="gemini_date_range">21 mai - 20 juin</string>
+
+    <!-- Cancer -->
+    <string name="cancer">Cancer</string>
+    <string name="cancer_date_range">21 juin - 22 juillet</string>
+
+    <!-- Leo -->
+    <string name="leo">Lion</string>
+    <string name="leo_date_range">23 juillet - 22 août</string>
+
+    <!-- Virgo -->
+    <string name="virgo">Vierge</string>
+    <string name="virgo_date_range">23 août - 22 septembre</string>
+
+    <!-- Libra -->
+    <string name="libra">Balance</string>
+    <string name="libra_date_range">23 septembre - 22 octobre</string>
+
+    <!-- Scorpio -->
+    <string name="scorpio">Scorpion</string>
+    <string name="scorpio_date_range">23 octobre - 21 novembre</string>
+
+    <!-- Sagittarius -->
+    <string name="sagittarius">Sagittaire</string>
+    <string name="sagittarius_date_range">22 novembre - 21 décembre</string>
+
+    <!-- Capricorn -->
+    <string name="capricorn">Capricorne</string>
+    <string name="capricorn_date_range">22 décembre - 19 janvier</string>
+
+    <!-- Aquarius -->
+    <string name="aquarius">Verseau</string>
+    <string name="aquarius_date_range">20 janvier - 18 février</string>
+
+    <!-- Pisces -->
+    <string name="pisces">Poissons</string>
+    <string name="pisces_date_range">19 février - 20 mars</string>
+
+    <string name="search">Rechercher</string>
+    <string name="menu_favorite">Favori</string>
+    <string name="translating">Traduction en cours…</string>
+</resources>

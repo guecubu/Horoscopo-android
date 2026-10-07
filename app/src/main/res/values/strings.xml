@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">Daily horoscope</string>
+    <string name="app_title">Zodiac</string>
+    <string name="app_subtitle">Check your daily horoscope</string>
+
+    <!-- Constant strings -->
+    <string name="SESSION_PREFERENCES_KEY" translatable="false">horoscope_session</string>
+    <string name="FAVORITE_KEY" translatable="false">horoscopo_fav</string>
 
     <!-- Aries -->
     <string name="aries">Aries</string>
@@ -48,7 +54,12 @@
     <!-- Pisces -->
     <string name="pisces">Pisces</string>
     <string name="pisces_date_range">February 19 - March 20</string>
+
+
     <string name="iconDescription" translatable="false">description</string>
     <string name="search">Search</string>
-    <string name="menu_favorite">Favorito\n</string>
+    <string name="menu_favorite">Favorite</string>
+    <string name="translating">Translating…</string>
+    <string name="share_horoscope">Share your horoscope</string>
+
 </resources>

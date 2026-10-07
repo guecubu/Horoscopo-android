@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">الأبراج اليومية</string>
+    <string name="app_title">الأبراج</string>
+    <string name="app_subtitle">تحقق من برجك اليومي</string>
+
+    <!-- Aries -->
+    <string name="aries">الحمل</string>
+    <string name="aries_date_range">21 مارس - 19 أبريل</string>
+
+    <!-- Taurus -->
+    <string name="taurus">الثور</string>
+    <string name="taurus_date_range">20 أبريل - 20 مايو</string>
+
+    <!-- Gemini -->
+    <string name="gemini">الجوزاء</string>
+    <string name="gemini_date_range">21 مايو - 20 يونيو</string>
+
+    <!-- Cancer -->
+    <string name="cancer">السرطان</string>
+    <string name="cancer_date_range">21 يونيو - 22 يوليو</string>
+
+    <!-- Leo -->
+    <string name="leo">الأسد</string>
+    <string name="leo_date_range">23 يوليو - 22 أغسطس</string>
+
+    <!-- Virgo -->
+    <string name="virgo">العذراء</string>
+    <string name="virgo_date_range">23 أغسطس - 22 سبتمبر</string>
+
+    <!-- Libra -->
+    <string name="libra">الميزان</string>
+    <string name="libra_date_range">23 سبتمبر - 22 أكتوبر</string>
+
+    <!-- Scorpio -->
+    <string name="scorpio">العقرب</string>
+    <string name="scorpio_date_range">23 أكتوبر - 21 نوفمبر</string>
+
+    <!-- Sagittarius -->
+    <string name="sagittarius">القوس</string>
+    <string name="sagittarius_date_range">22 نوفمبر - 21 ديسمبر</string>
+
+    <!-- Capricorn -->
+    <string name="capricorn">الجدي</string>
+    <string name="capricorn_date_range">22 ديسمبر - 19 يناير</string>
+
+    <!-- Aquarius -->
+    <string name="aquarius">الدلو</string>
+    <string name="aquarius_date_range">20 يناير - 18 فبراير</string>
+
+    <!-- Pisces -->
+    <string name="pisces">الحوت</string>
+    <string name="pisces_date_range">19 فبراير - 20 مارس</string>
+
+    <string name="search">بحث</string>
+    <string name="menu_favorite">المفضلة</string>
+    <string name="translating">جاري الترجمة…</string>
+</resources>

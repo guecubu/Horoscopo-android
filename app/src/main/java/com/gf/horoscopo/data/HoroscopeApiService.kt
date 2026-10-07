@@ -1,4 +1,4 @@
-package com.gf.horoscopo
+package com.gf.horoscopo.data
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -13,11 +13,9 @@ interface HoroscopeApiService {
         private const val BASE_URL = "https://freehoroscopeapi.com/"
 
         fun create(): HoroscopeApiService {
-            return Retrofit.Builder()
-                .baseUrl(BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build()
-                .create(HoroscopeApiService::class.java)
+            return Retrofit.Builder().baseUrl(BASE_URL)
+                    .addConverterFactory(GsonConverterFactory.create()).build()
+                    .create(HoroscopeApiService::class.java)
         }
     }
 }

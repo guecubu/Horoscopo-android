@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Horóscopo diario</string>
+    <string name="app_title">Zodíaco</string>
+    <string name="app_subtitle">Consulta tu horóscopo diario</string>
 
     <!-- Aries -->
     <string name="aries">Aries</string>
@@ -49,4 +51,6 @@
     <string name="pisces">Piscis</string>
     <string name="pisces_date_range">19 de febrero - 20 de marzo</string>
     <string name="search">Búsqueda</string>
+    <string name="menu_favorite">Favorito</string>
+    <string name="translating">Traduciendo…</string>
 </resources>
