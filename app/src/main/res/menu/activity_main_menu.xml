@@ -7,4 +7,9 @@
         android:title="@string/search"
         app:actionViewClass="androidx.appcompat.widget.SearchView"
         app:showAsAction="always|collapseActionView" />
+    <item
+        android:id="@+id/view_menu"
+        android:icon="@drawable/ic_menu_grid_view"
+        android:title="@string/view_menu"
+        app:showAsAction="always" />
 </menu>

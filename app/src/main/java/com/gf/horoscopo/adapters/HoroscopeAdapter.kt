@@ -17,9 +17,13 @@ class HoroscopeAdapter(val onItemClick: (Horoscope) -> Unit) :
                 HoroscopeDiffCallback) {
     //  class HoroscopeAdapter(var items: List<Horoscope>, val onItemClick: (position: Int) -> Unit) :
     //            RecyclerView.Adapter<HoroscopeViewHolder>() {
+    var isGridView: Boolean = false
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HoroscopeViewHolder {
-        val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.item_horoscope, parent, false)
+
+        val layout = if (viewType == 1) R.layout.item_horoscope_grid
+        else R.layout.item_horoscope_list
+
+        val view = LayoutInflater.from(parent.context).inflate(layout, parent, false)
         return HoroscopeViewHolder(view)
     }
 
@@ -29,6 +33,10 @@ class HoroscopeAdapter(val onItemClick: (Horoscope) -> Unit) :
         holder.itemView.setOnClickListener {
             onItemClick(horoscope)
         }
+    }
+
+    override fun getItemViewType(position: Int): Int {
+        return if (isGridView) 1 else 0
     }
 
     object HoroscopeDiffCallback : DiffUtil.ItemCallback<Horoscope>() {

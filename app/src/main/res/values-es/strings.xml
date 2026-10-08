@@ -52,5 +52,9 @@
     <string name="pisces_date_range">19 de febrero - 20 de marzo</string>
     <string name="search">Búsqueda</string>
     <string name="menu_favorite">Favorito</string>
-    <string name="translating">Traduciendo…</string>
+    <string name="translating">✨ Traduciendo  ✨</string>
+    <string name="share_horoscope_title">Comparte tu horóscopo</string>
+    <string name="share_horoscope_text1">Horóscopo de hoy para </string>
+    <string name="view_menu">Cambiar vista lista/cuadrícula</string>
+
 </resources>

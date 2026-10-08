@@ -53,5 +53,9 @@
 
     <string name="search">搜索</string>
     <string name="menu_favorite">收藏</string>
-    <string name="translating">正在翻译…</string>
+    <string name="translating">✨ 正在翻译  ✨</string>
+    <string name="share_horoscope_title">分享您的星座运势 </string>
+    <string name="share_horoscope_text1">今日运势： </string>
+    <string name="view_menu">切换列表/网格视图</string>
+
 </resources>

@@ -59,7 +59,13 @@
     <string name="iconDescription" translatable="false">description</string>
     <string name="search">Search</string>
     <string name="menu_favorite">Favorite</string>
-    <string name="translating">Translating…</string>
-    <string name="share_horoscope">Share your horoscope</string>
+    <string name="translating">✨ Translating  ✨</string>
+    <string name="share_horoscope_title">Share your horoscope</string>
+    <string name="share_horoscope_text1">Today horoscope for </string>
+    <string name="view_menu">Toggle view list/grid</string>
+
+    <!-- Errors -->
+    <string name="error_fetch_horoscope">Error loading horoscope: %s</string>
+    <string name="error_no_internet">No internet connection</string>
 
 </resources>

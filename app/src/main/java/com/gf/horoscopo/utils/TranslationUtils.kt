@@ -27,7 +27,7 @@ fun TextView.setTranslatedText(originalText: String, sourceLanguage: String) {
 
     // Elegant and centered visual feedback with emoji while translating
     this.gravity = Gravity.CENTER
-    this.text = "✨ ${context.getString(R.string.translating)}"
+    this.setText(R.string.translating)
 
     // 3. Configure ML Kit dynamically
     val options = TranslatorOptions.Builder().setSourceLanguage(

@@ -2,12 +2,12 @@ package com.gf.horoscopo.activities
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import androidx.activity.enableEdgeToEdge
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.gf.horoscopo.R
@@ -20,10 +20,11 @@ class MainActivity : androidx.appcompat.app.AppCompatActivity() {
     private lateinit var horoscopeRecyclerView: RecyclerView
     private lateinit var horoscopeAdapter: HoroscopeAdapter
 
+    private var isGridView = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-
         setContentView(R.layout.activity_main)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -32,10 +33,8 @@ class MainActivity : androidx.appcompat.app.AppCompatActivity() {
             insets
         }
 
-        horoscopeRecyclerView = findViewById(
-                R.id.horoscopeRecyclerView) //        horoscopeAdapter = HoroscopeAdapter(horoscopeList) { position ->
+        horoscopeRecyclerView = findViewById(R.id.horoscopeRecyclerView)
         horoscopeAdapter = HoroscopeAdapter { horoscope ->
-            Log.d("MainActivity", "Horoscope clicked: $horoscope")
             val intent = Intent(this, DetailActivity::class.java).apply {
                 putExtra("HOROSCOPE_ID", horoscope.id)
             }
@@ -51,13 +50,12 @@ class MainActivity : androidx.appcompat.app.AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-
         horoscopeAdapter.notifyDataSetChanged()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.activity_main_menu, menu)
-
+        val viewMenuItem = menu.findItem(R.id.view_menu)
         val searchItem = menu.findItem(R.id.search_menu)
         val searchView = searchItem.actionView as androidx.appcompat.widget.SearchView
 
@@ -68,27 +66,44 @@ class MainActivity : androidx.appcompat.app.AppCompatActivity() {
             }
 
             override fun onQueryTextChange(newText: String): Boolean {
-
                 val filteredList = horoscopeList.filter {
                     getString(it.name).search(newText) || getString(it.dateRange).search(newText)
                 }
-
-                horoscopeAdapter.submitList(
-                        filteredList) //                horoscopeAdapter.updateData(filteredList)
+                horoscopeAdapter.submitList(filteredList)
                 return true
             }
         })
-
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.search_menu -> { //                startActivity(Intent(this, AboutActivity::class.java))
+            R.id.search_menu -> {
+                true
+            }
+
+            R.id.view_menu -> {
+                isGridView = horoscopeRecyclerView.layoutManager is GridLayoutManager
+
+                horoscopeRecyclerView.layoutManager = if (isGridView) {
+                    LinearLayoutManager(this)
+                }
+                else {
+                    GridLayoutManager(this, 2)
+
+                }
+
+                isGridView = !isGridView
+                item.setIcon(
+                        if (isGridView) R.drawable.ic_menu_list_view else R.drawable.ic_menu_grid_view)
+
+                (horoscopeRecyclerView.adapter as HoroscopeAdapter).isGridView = isGridView
+                horoscopeRecyclerView.adapter?.notifyDataSetChanged()
                 true
             }
 
             else -> super.onOptionsItemSelected(item)
         }
     }
+
 }

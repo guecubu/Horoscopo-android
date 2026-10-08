@@ -85,13 +85,13 @@ class DetailActivity : androidx.appcompat.app.AppCompatActivity() {
                 }
 
 
-                horoscopeDescription.setTranslatedText(response.data.horoscope,
-                        "en") //                horoscopeDescription.text = response.data.horoscope
+                horoscopeDescription.setTranslatedText(response.data.horoscope, "en")
                 horoscopeProgressBar.visibility = View.GONE
             }
             catch (e: Exception) {
                 horoscopeProgressBar.visibility = View.GONE
-                horoscopeDescription.text = "Error loading horoscope: ${e.localizedMessage}"
+                horoscopeDescription.text =
+                    getString(R.string.error_fetch_horoscope, e.localizedMessage)
             }
         }
     }
@@ -125,13 +125,16 @@ class DetailActivity : androidx.appcompat.app.AppCompatActivity() {
             }
 
             R.id.share_menu -> {
+
+                val shareText = getString(
+                        R.string.share_horoscope_text1) + horoscopeName.text.toString() + ":\n\n" + horoscopeDescription.text
                 val sendIntent = Intent().apply {
                     action = ACTION_SEND
-                    putExtra(Intent.EXTRA_TEXT, "This is my text to send.")
+                    putExtra(Intent.EXTRA_TEXT, shareText)
                     type = "text/plain"
                 }
                 val shareIntent =
-                    Intent.createChooser(sendIntent, R.string.share_horoscope.toString())
+                    Intent.createChooser(sendIntent, getString(R.string.share_horoscope_title))
                 startActivity(shareIntent)
 
                 true

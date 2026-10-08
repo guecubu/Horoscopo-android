@@ -53,5 +53,9 @@
 
     <string name="search">بحث</string>
     <string name="menu_favorite">المفضلة</string>
-    <string name="translating">جاري الترجمة…</string>
+    <string name="translating">✨ جاري الترجمة  ✨</string>
+    <string name="share_horoscope_title">شارك برجك</string>
+    <string name="share_horoscope_text1">برج اليوم لـ </string>
+    <string name="view_menu">تبديل عرض قائمة/شبكة</string>
+
 </resources>

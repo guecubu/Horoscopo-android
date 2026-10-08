@@ -53,5 +53,9 @@
 
     <string name="search">Rechercher</string>
     <string name="menu_favorite">Favori</string>
-    <string name="translating">Traduction en cours…</string>
+    <string name="translating">✨ Traduction en cours  ✨</string>
+    <string name="share_horoscope_title">Partagez votre horoscope</string>
+    <string name="share_horoscope_text1">Horoscope du jour pour </string>
+    <string name="view_menu">Basculer vue liste/grille</string>
+
 </resources>
