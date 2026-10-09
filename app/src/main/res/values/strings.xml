@@ -67,5 +67,8 @@
     <!-- Errors -->
     <string name="error_fetch_horoscope">Error loading horoscope: %s</string>
     <string name="error_no_internet">No internet connection</string>
+    <string name="todayView">Today</string>
+    <string name="weekly">Weekly</string>
+    <string name="monthly">Monthly</string>
 
 </resources>

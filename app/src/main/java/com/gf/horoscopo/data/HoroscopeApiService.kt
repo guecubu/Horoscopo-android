@@ -9,6 +9,12 @@ interface HoroscopeApiService {
     @GET("api/v1/get-horoscope/daily")
     suspend fun getDailyHoroscope(@Query("sign") sign: String): HoroscopeResponse
 
+    @GET("api/v1/get-horoscope/weekly")
+    suspend fun getWeeklyHoroscope(@Query("sign") sign: String): HoroscopeResponse
+
+    @GET("api/v1/get-horoscope/monthly")
+    suspend fun getMonthlyHoroscope(@Query("sign") sign: String): HoroscopeResponse
+
     companion object {
         private const val BASE_URL = "https://freehoroscopeapi.com/"
 

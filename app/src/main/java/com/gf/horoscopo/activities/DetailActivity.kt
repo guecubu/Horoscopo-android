@@ -18,6 +18,7 @@ import com.gf.horoscopo.data.Horoscope
 import com.gf.horoscopo.data.HoroscopeApiService
 import com.gf.horoscopo.utils.SessionManager
 import com.gf.horoscopo.utils.setTranslatedText
+import com.google.android.material.button.MaterialButtonToggleGroup
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -52,7 +53,19 @@ class DetailActivity : androidx.appcompat.app.AppCompatActivity() {
         initViews()
 
         setHoroscopeData(horoscope)
-        fetchHoroscope(id)
+        fetchHoroscope(id, "daily")
+
+        findViewById<MaterialButtonToggleGroup>(
+                R.id.buttonGroup).addOnButtonCheckedListener { _, checkedId, isChecked ->
+            if (isChecked) {
+                val period = when (checkedId) {
+                    R.id.buttonWeekly -> "weekly"
+                    R.id.buttonMonthly -> "monthly"
+                    else -> "daily"
+                }
+                fetchHoroscope(id, period)
+            }
+        }
     }
 
     private fun initViews() {
@@ -74,16 +87,19 @@ class DetailActivity : androidx.appcompat.app.AppCompatActivity() {
         horoscopeDate.setText(horoscope.dateRange)
     }
 
-    private fun fetchHoroscope(sign: String) {
+    private fun fetchHoroscope(sign: String, period: String = "daily") {
         horoscopeProgressBar.visibility = View.VISIBLE
         horoscopeDescription.text = ""
 
         lifecycleScope.launch {
             try {
                 val response = withContext(Dispatchers.IO) {
-                    HoroscopeApiService.create().getDailyHoroscope(sign)
+                    when (period) {
+                        "weekly" -> HoroscopeApiService.create().getWeeklyHoroscope(sign)
+                        "monthly" -> HoroscopeApiService.create().getMonthlyHoroscope(sign)
+                        else -> HoroscopeApiService.create().getDailyHoroscope(sign)
+                    }
                 }
-
 
                 horoscopeDescription.setTranslatedText(response.data.horoscope, "en")
                 horoscopeProgressBar.visibility = View.GONE
