@@ -11,7 +11,8 @@
     <!-- Secondary Colors (Light Mode) -->
     <color name="secondary">#510BD0</color>
     <color name="on_secondary">#FFFFFF</color>
-    <color name="secondary_container">#C8AAFF</color>
+    <color name="secondary_container">#DBE3FF</color>
+    <color name="on_secondary_container">#FF000000</color>
 
     <!-- Card Background (Light Mode) -->
     <color name="card_background">#DBE3FF</color>
