@@ -58,4 +58,17 @@
     <string name="share_horoscope_text1">برج اليوم لـ </string>
     <string name="view_menu">تبديل عرض قائمة/شبكة</string>
 
+    <!-- Errors -->
+    <string name="error_fetch_horoscope">خطأ في تحميل الأبراج: %s</string>
+    <string name="error_no_internet">لا يوجد اتصال بالإنترنت</string>
+    <string name="todayView">اليوم</string>
+    <string name="weekly">أسبوعي</string>
+    <string name="monthly">شهري</string>
+
+    <!-- Translation Dialog -->
+    <string name="translation_dialog_title">تنزيل الترجمة</string>
+    <string name="translation_dialog_message">نموذج الترجمة (حوالي 35 ميجابايت) غير منزل. هل تريد تنزيله باستخدام بيانات الهاتف المحمول أم عرض النص الأصلي؟</string>
+    <string name="download">تنزيل</string>
+    <string name="view_original">عرض الأصلي</string>
+
 </resources>

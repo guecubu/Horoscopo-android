@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.gf.horoscopo.R
 import com.gf.horoscopo.adapters.HoroscopeAdapter
 import com.gf.horoscopo.data.Horoscope
+import com.gf.horoscopo.utils.TranslationManager
 import com.gf.horoscopo.utils.search
 
 class MainActivity : androidx.appcompat.app.AppCompatActivity() {
@@ -26,6 +27,8 @@ class MainActivity : androidx.appcompat.app.AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+
+        TranslationManager.preloadActiveLanguageModel(this)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())

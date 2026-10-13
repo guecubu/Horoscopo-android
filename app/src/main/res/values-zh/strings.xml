@@ -58,4 +58,17 @@
     <string name="share_horoscope_text1">今日运势： </string>
     <string name="view_menu">切换列表/网格视图</string>
 
+    <!-- Errors -->
+    <string name="error_fetch_horoscope">加载星座运势出错：%s</string>
+    <string name="error_no_internet">无网络连接</string>
+    <string name="todayView">今天</string>
+    <string name="weekly">每周</string>
+    <string name="monthly">每月</string>
+
+    <!-- Translation Dialog -->
+    <string name="translation_dialog_title">下载翻译</string>
+    <string name="translation_dialog_message">翻译模型（约 35 MB）未下载。您是要使用移动数据下载还是查看原文？</string>
+    <string name="download">下载</string>
+    <string name="view_original">查看原文</string>
+
 </resources>

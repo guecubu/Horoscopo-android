@@ -71,4 +71,10 @@
     <string name="weekly">Weekly</string>
     <string name="monthly">Monthly</string>
 
+    <!-- Translation Dialog -->
+    <string name="translation_dialog_title">Download translation</string>
+    <string name="translation_dialog_message">The translation model (approx. 35 MB) is not downloaded. Do you want to download it using mobile data or view the original text?</string>
+    <string name="download">Download</string>
+    <string name="view_original">View original</string>
+
 </resources>

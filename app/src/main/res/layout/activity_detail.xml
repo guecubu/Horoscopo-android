@@ -93,6 +93,9 @@
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:backgroundTint="@color/toggle_button_bg"
+            app:icon="@drawable/ic_calendar_today"
+            app:iconTint="@null"
             android:text="@string/todayView" />
 
         <com.google.android.material.button.MaterialButton
@@ -100,13 +103,19 @@
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/weekly" />
+            android:text="@string/weekly"
+            app:backgroundTint="@color/toggle_button_bg"
+            app:icon="@drawable/ic_calendar_week"
+            app:iconTint="@null" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonMonthly"
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/monthly" />
+            android:text="@string/monthly"
+            app:backgroundTint="@color/toggle_button_bg"
+            app:icon="@drawable/ic_calendar_month"
+            app:iconTint="@null" />
     </com.google.android.material.button.MaterialButtonToggleGroup>
 </LinearLayout>

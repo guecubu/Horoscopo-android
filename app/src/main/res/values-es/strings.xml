@@ -57,4 +57,17 @@
     <string name="share_horoscope_text1">Horóscopo de hoy para </string>
     <string name="view_menu">Cambiar vista lista/cuadrícula</string>
 
+    <!-- Errors -->
+    <string name="error_fetch_horoscope">Error al cargar el horóscopo: %s</string>
+    <string name="error_no_internet">Sin conexión a internet</string>
+    <string name="todayView">Hoy</string>
+    <string name="weekly">Semanal</string>
+    <string name="monthly">Mensual</string>
+
+    <!-- Translation Dialog -->
+    <string name="translation_dialog_title">Descargar traducción</string>
+    <string name="translation_dialog_message">El modelo de traducción (aprox. 35 MB) no está descargado. ¿Deseas descargarlo usando datos móviles o prefieres ver el texto original?</string>
+    <string name="download">Descargar</string>
+    <string name="view_original">Ver original</string>
+
 </resources>
